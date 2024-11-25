@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h2>Playlist</h2>
+            <div id="playlist"></div>
+        </div>
+
+        <div class="content-area">
+            
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="searchVideos()">Buscar</button>
+            </div>
+
+            <div class="player-section">
+                <div class="player-container mini" id="player-container">
+                    <div id="player"></div>
+                </div>
+            </div>
+
+            
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
+    <div class="player-controls">
+        <div class="controls">
+            <button class="control-button" id="prev-button">⏮</button>
+            <button class="control-button" id="play-pause">▶</button>
+            <button class="control-button" id="next-button">⏭</button>
+            <button class="control-button" id="add-to-playlist">📋</button>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
+        </div>
+        <div class="volume-control">
+            <button class="control-button">🔊</button>
+            <input type="range" id="volume-control" min="0" max="100" value="100">
+        </div>
+        <button id="expand-button">Expandir</button>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./js/script.js"></script>
+    </body>
+</html>
